@@ -1,0 +1,59 @@
+A framework to define the score of an area can be defined as below (each line has its own score value for the truthiness value):
+
+
+1. Prevalence of sidewalks and walking trails to walk point-to-point ( true - 1, false - 0)
+
+
+
+2. Conduciveness to dangerous, high speed traffic (if true - 0, if false - 1) 
+
+
+
+3. Conduciveness to walking distance stores and shops (if true, - 1 , if false - 0)
+
+
+
+4. Conduciveness to potentially dangerous criminal activity (if true - 0, if false - 1)
+
+
+5.  If applicable (ie, at intersection, or far from close crosswalk), are there there adequate crosswalks, signage, and stop/yield signs (true - 1, false -0)
+
+ 
+
+6.  Does there appear to be a low volume of traffic (true -1, false - 0)
+
+
+7.  Are the vehicles in the environment generally heavy-duty/area seems conducive to them, industrial (trucks, pickup trucks, vans, commercial/industrial vehicles)? (True -0, false - 1)
+
+where the score is the sum of the corresponding integers to each of the answers. Note that true -1 means true=1, not true=-1.
+
+
+
+
+
+Here are a set of 6 images of three locations. Note that images titled x_image0 and x_image90 depict the same location but different images.. Can you score each location given the framework already defined?
+
+low:
+
+in general, environments unfriendly to pedestrians  have high-speed traffic, few crosswalks and very wide roads, and and low-quality sidewalks, with far apart stores.
+
+
+
+medium:
+
+in general, medium walkability environments contain some stores close by, but some high speed traffic at medium volumes. There are typically crosswalks, lighting, sidewalks, and potentially bike lanes.
+
+
+
+high:
+
+in general, high walkability environments have most stores within walking distance as well as mass transit, very little to no high speed traffic, thin roads (2 lanes per direction, at max), as well as high quality and abundant crosswalks, lighting, sidewalks, and bike lanes, all of which are separated from traffic. 
+
+
+
+Given this information , can you categorize the area  represented by the images into a low (score = 0-2),  medium (score = 3-5), or high (score = 6-7) walkability environment, based on the sum of the “points” earned in each step.
+
+identify all important features that may be relevant to walkability by the above definition without accessing any other sources. 
+
+Additionally, can you give the coordinates of the bounding box of those, if applicable (in terms of pixels).
+Also, please provied the three key reasons why you gave each location it's score, as well as a one sentence summary of the overall urban design seen in theese three images. 
